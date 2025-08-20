@@ -3,8 +3,15 @@
   <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" />
   <p>{{ product.description | strip_html | truncatewords: 25 }}</p>
 
-  {% form 'product', product %}
-    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+  <form method="post" action="/cart/add" id="quick-view-form-{{ product.id }}">
+    <select name="id" style="display: block; margin-bottom: 10px;">
+      {% for variant in product.variants %}
+        <option value="{{ variant.id }}">
+          {{ variant.title }} {% if variant.available == false %} - Sold out {% endif %}
+        </option>
+      {% endfor %}
+    </select>
     <button type="submit">Add to Cart</button>
-  {% endform %}
+  </form>
 </div>
+
