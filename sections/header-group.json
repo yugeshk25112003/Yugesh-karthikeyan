@@ -11,6 +11,10 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "17556959796f84a78b": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
@@ -27,7 +31,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
@@ -41,21 +45,11 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "custom_liquid_8zT9E4": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "TISSO VISION",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 12
-      }
     }
   },
   "order": [
+    "17556959796f84a78b",
     "announcement-bar",
-    "header",
-    "custom_liquid_8zT9E4"
+    "header"
   ]
 }
