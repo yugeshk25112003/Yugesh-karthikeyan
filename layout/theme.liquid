@@ -55,7 +55,7 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       {% for scheme in settings.color_schemes -%}
-        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url }}">
         {% if forloop.index == 1 -%}
           :root,
         {%- endif %}
@@ -94,7 +94,8 @@
       }
       {% endfor %}
 
-      {{ scheme_classes | prepend: 'body' }} {
+     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+ {
         color: rgba(var(--color-foreground), 0.75);
         background-color: rgb(var(--color-background));
       }
