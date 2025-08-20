@@ -1,0 +1,10 @@
+<div class="quick-view-details">
+  <h2>{{ product.title }}</h2>
+  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" />
+  <p>{{ product.description | strip_html | truncatewords: 25 }}</p>
+
+  {% form 'product', product %}
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit">Add to Cart</button>
+  {% endform %}
+</div>

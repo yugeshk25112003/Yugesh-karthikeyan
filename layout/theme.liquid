@@ -332,6 +332,40 @@
     color: #000;
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('quick-view-modal');
+    const content = document.getElementById('quick-view-content');
+    const closeBtn = document.getElementById('quick-view-close');
+
+    document.querySelectorAll('.quick-view-trigger').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const handle = this.getAttribute('data-handle');
+
+        fetch(`/products/${handle}?view=quick-view`)
+          .then(res => res.text())
+          .then(html => {
+            content.innerHTML = html;
+            modal.style.display = 'flex';
+          });
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+      content.innerHTML = '';
+    });
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        content.innerHTML = '';
+      }
+    });
+  });
+</script>
+
 
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
