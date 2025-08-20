@@ -23,7 +23,7 @@
           "type": "text",
           "settings": {
             "text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts todelight your loved ones this holiday season.",
-            "text_style": "body"
+            "text_style": "subtitle"
           }
         },
         "button": {
