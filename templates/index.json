@@ -19,6 +19,13 @@
             "heading_size": "h0"
           }
         },
+        "text_tjawHA": {
+          "type": "text",
+          "settings": {
+            "text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts todelight your loved ones this holiday season.",
+            "text_style": "body"
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -33,6 +40,7 @@
       },
       "block_order": [
         "heading",
+        "text_tjawHA",
         "button"
       ],
       "settings": {
@@ -41,9 +49,9 @@
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-left",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
