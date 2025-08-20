@@ -1,6 +1,10 @@
 <div class="quick-view-details">
   <h2>{{ product.title }}</h2>
-  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" />
+{% if product.featured_image %}
+  <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy" />
+{% endif %}
+
+
   <p>{{ product.description | strip_html | truncatewords: 25 }}</p>
 
   <form method="post" action="/cart/add" id="quick-view-form-{{ product.id }}">
